@@ -28,7 +28,7 @@ useEffect(() => {
     clearTimeout(hideLoader);
     clearTimeout(setLoadingFalse);
   };
-}, []);
+}, [router]);
 
 
   const checkAuthentication = () => {

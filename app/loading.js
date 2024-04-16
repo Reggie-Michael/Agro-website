@@ -11,6 +11,7 @@ const Loading = ({ className }) => {
       <div className="rounded-full  animate-pulse flex object-cover object-top">
         <Image
           src="/assets/images/Agro Logo.svg"
+          alt="Logo"
           width={599}
           height={443}
           className="object-cover size-40"
