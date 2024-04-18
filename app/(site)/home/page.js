@@ -50,7 +50,7 @@ const Home = () => {
                     Categorias
                   </Typography>
                   <Button
-                    onClick={() => router.push("/produce")}
+                    onClick={() => router.push("")}
                     className="font-montserrat text-base font-bold capitalize text-[#FF5714] shadow-none"
                   >
                     Ver todos
@@ -60,10 +60,11 @@ const Home = () => {
                   <div className="flex size-full flex-col items-center object-center ">
                     <div className="w-full rounded-xl md:border md:border-[#7B7777]">
                       <Image
+                        onClick={() => router.push("/produce")}
                         width={1000}
                         height={770}
                         src="/assets/images/Image yam.png"
-                        alt="Yam"
+                        alt="Mandioca"
                         className="aspect-square h-24 w-full rounded-xl border-2 border-black/85 object-cover object-center md:h-36  lg:h-48"
                       />
                     </div>

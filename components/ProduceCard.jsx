@@ -22,7 +22,7 @@ const ProduceCard = ({
       onClick={() => router.push("/produce/display")}
     >
       <div className="h-full w-[25%] rounded-2xl bg-[#D9D9D9]"></div>
-      <div className="flex h-full flex-1 flex-col gap-1 px-[3%] py-2 lg:py-4 md:gap-2 ">
+      <div className="flex h-full flex-1 flex-col gap-1 px-[3%] py-2 md:gap-2 lg:py-4 ">
         <div className="flex w-full items-center gap-1">
           <Typography
             variant="h2"
