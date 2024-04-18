@@ -20,8 +20,8 @@ const ProduceView = () => {
 
   useEffect(() => {
     // Page load animation trackers
-    const hideLoader = setTimeout(() => setLoaderHidden(true), 1200); // Adjust timing for hide animation
-    const setLoadingFalse = setTimeout(() => setIsLoading(false), 2000);
+    const hideLoader = setTimeout(() => setLoaderHidden(true), 500); // Adjust timing for hide animation
+    const setLoadingFalse = setTimeout(() => setIsLoading(false), 1300);
 
     // Clean up timeouts to avoid memory leaks
     return () => {

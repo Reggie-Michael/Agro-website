@@ -3,7 +3,7 @@ import Image from "next/image";
 const Loading = ({ className }) => {
   return (
     <div
-      className={`w-full h-screen flex items-center justify-center bg-[#3D6440] saturate-150  transition-all  animate__animated  ${className}`}
+      className={`w-full h-screen flex items-center justify-center bg-[#3D6440] saturate-[1.1]  transition-all  animate__animated  ${className}`}
       style={{
         "--animation-duration": "100ms",
       }}

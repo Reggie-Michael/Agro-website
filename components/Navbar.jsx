@@ -1,16 +1,18 @@
 "use client";
 import { Button } from "@material-tailwind/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar = ({ className }) => {
   const [activePage, setActivePage] = useState("menu");
-
+  const router = useRouter();
   return (
     <div
-      className={`grid grid-cols-5 min-h-[10%] w-full items-center justify-between gap-1 px-[5%] font-montserrat ${className}`}
+      className={`grid min-h-[10%] w-full grid-cols-5 items-center justify-between gap-1 px-[5%] font-montserrat ${className}`}
     >
       <Button
+        onClick={() => router.push("/home")}
         className={`flex flex-col items-center justify-center gap-1 bg-transparent px-2 py-1 text-xs font-medium capitalize shadow-none ${activePage === "menu" ? "rounded-none  border-b-2 border-b-[#FF5714] text-[#FF5714]" : "text-[#686D76]"}`}
       >
         <Image
