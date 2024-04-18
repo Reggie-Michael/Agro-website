@@ -19,32 +19,16 @@ const ProduceView = () => {
   const router = useRouter();
 
   useEffect(() => {
-    let hideLoader;
-    let setLoadingFalse;
-
-    // Check authentication status
-    const isAuthenticated = checkAuthentication(); // Example: Replace with your authentication logic
-
-    if (!isAuthenticated) {
-      router.push("/login");
-    } else {
-      // Page load animation trackers
-      hideLoader = setTimeout(() => setLoaderHidden(true), 1200); // Adjust timing for hide animation
-      setLoadingFalse = setTimeout(() => setIsLoading(false), 2000);
-    }
+    // Page load animation trackers
+    const hideLoader = setTimeout(() => setLoaderHidden(true), 1200); // Adjust timing for hide animation
+    const setLoadingFalse = setTimeout(() => setIsLoading(false), 2000);
 
     // Clean up timeouts to avoid memory leaks
     return () => {
       clearTimeout(hideLoader);
       clearTimeout(setLoadingFalse);
     };
-  }, [router]);
-
-  const checkAuthentication = () => {
-    // Example: Check if user is authenticated (e.g., by checking if a token is present)
-    const token = sessionStorage.getItem("authorized");
-    return !!token; // If token exists, user is authenticated
-  };
+  }, []);
 
   return (
     <>
