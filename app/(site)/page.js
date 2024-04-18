@@ -76,7 +76,7 @@ const Home = () => {
                       <Image
                         width={1000}
                         height={770}
-                        src="/assets/images/image yam.png"
+                        src="/assets/images/Image yam.png"
                         alt="Yam"
                         className="aspect-square h-24 w-full rounded-xl border-2 border-black/85 object-cover object-center md:h-36  lg:h-48"
                       />
@@ -89,7 +89,7 @@ const Home = () => {
                     <Image
                       width={126}
                       height={104}
-                      src="/assets/images/image rice.png"
+                      src="/assets/images/Image rice.png"
                       alt="Rice"
                       className="aspect-square  h-24 w-full object-center  md:h-36 lg:h-48"
                     />

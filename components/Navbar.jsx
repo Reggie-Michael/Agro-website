@@ -8,7 +8,7 @@ const Navbar = ({ className }) => {
 
   return (
     <div
-      className={`flex min-h-[10%] w-full items-center justify-between gap-1 px-[5%] font-montserrat ${className}`}
+      className={`grid grid-cols-5 min-h-[10%] w-full items-center justify-between gap-1 px-[5%] font-montserrat ${className}`}
     >
       <Button
         className={`flex flex-col items-center justify-center gap-1 bg-transparent px-2 py-1 text-xs font-medium capitalize shadow-none ${activePage === "menu" ? "rounded-none  border-b-2 border-b-[#FF5714] text-[#FF5714]" : "text-[#686D76]"}`}
