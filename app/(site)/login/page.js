@@ -38,13 +38,13 @@ const Login = () => {
                 type="text"
                 className="h-12 rounded-xl border-black/30 bg-[#DED5D5] px-4 text-[13px] text-black shadow-md shadow-black/20 outline-0 placeholder:text-black focus-within:placeholder:text-opacity-80 focus:border md:text-[15px] lg:h-16 "
               />
-              <div className="flex w-full  rounded-xl border-black/30 bg-[#DED5D5] shadow-md shadow-black/20  focus-within:border">
+              <div className="flex items-center w-full  rounded-xl border-black/30 bg-[#DED5D5] shadow-md shadow-black/20  focus-within:border">
                 <input
                   placeholder="Senha"
                   type="password"
-                  className="h-12 flex-1 rounded-xl border-none !bg-transparent px-4 text-[13px] text-black outline-0 placeholder:text-black focus-within:placeholder:text-opacity-80 md:text-[15px] lg:h-16 "
+                  className="h-12 flex-1 rounded-xl  border-none !bg-transparent px-4 text-[13px] text-black outline-0 placeholder:text-black focus-within:placeholder:text-opacity-80 md:text-[15px] lg:h-16 "
                 />
-                <IconButton>
+                <IconButton className="size-fit">
                   <FontAwesomeIcon title="Exibir" icon={faEye} />
                 </IconButton>
               </div>
