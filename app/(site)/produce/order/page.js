@@ -38,6 +38,13 @@ const OrderMonitor = () => {
     return;
   };
 
+  const handleBack = () => {
+    try {
+      router.back();
+    } catch (error) {
+      router.push("/produce/delivery");
+    }
+  };
   return (
     <>
       {isLoading ? (
@@ -182,7 +189,7 @@ const OrderMonitor = () => {
             </div>
           </div>
           <div className="flex w-4/5 items-center  justify-between md:w-3/5">
-            <IconButton className="relative flex size-16 items-center justify-center rounded-full bg-[#FD7640] !p-2 text-xl text-white">
+            <IconButton onClick={handleBack} className="relative flex size-16 items-center justify-center rounded-full !bg-[#FD7640] !p-2 text-xl !text-white">
               {/* <div className="w-8 h-[2px] bg-white border-none rotate-45 absolute"></div> */}
               {/* <div className="w-8 h-[2px] bg-white border-none -rotate-45 absolute"></div> */}
               <FontAwesomeIcon
@@ -194,7 +201,7 @@ const OrderMonitor = () => {
                 className="absolute rotate-[95deg] font-thin"
               />
             </IconButton>
-            <IconButton className=" flex size-16 items-center justify-center rounded-full bg-[#89EC99] !p-3 text-lg text-white">
+            <IconButton className=" flex size-16 items-center justify-center rounded-full !bg-[#89EC99] !p-3 text-lg text-white">
               <Image
                 src={"/assets/icons/chatIcon.svg"}
                 height={40}

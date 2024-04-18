@@ -1,6 +1,5 @@
 "use client";
 import React, { Suspense, useEffect, useState } from "react";
-import Loading from "../loading";
 // import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
@@ -11,6 +10,8 @@ import { IconButton } from "@mui/material";
 // import { Favorite, FavoriteRounded, StarRounded } from "@mui/icons-material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
+import Loading from "@/app/loading";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
