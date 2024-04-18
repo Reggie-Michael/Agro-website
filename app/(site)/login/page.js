@@ -1,4 +1,5 @@
 "use client";
+import Loading from "@/app/loading";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Input } from "@material-tailwind/react";

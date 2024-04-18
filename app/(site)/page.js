@@ -6,6 +6,7 @@ import { IconButton } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import Loading from "../loading";
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(true);
