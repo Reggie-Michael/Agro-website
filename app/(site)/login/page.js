@@ -1,8 +1,11 @@
 "use client";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Input } from "@material-tailwind/react";
 import {
   Box,
   Button,
+  IconButton,
   InputAdornment,
   TextField,
   Typography,
@@ -28,108 +31,30 @@ const Login = () => {
               // className="w-full"
             />
           </div>
-          <form className="flex h-3/5 w-full flex-col items-center justify-between gap-3 rounded-3xl border border-black border-opacity-[0.26] bg-white p-9 text-black shadow-inner shadow-[#121212]/40">
+          <form className="flex h-3/5 w-full flex-col items-center justify-between gap-7 rounded-3xl border border-black border-opacity-[0.26] bg-white p-9 text-black shadow-inner shadow-[#121212]/40">
             <div className="flex w-full flex-col  gap-7">
-              <Box className="w-full rounded-xl lg:h-16">
-                <TextField
-                  // variant="filled"
-                  color="neutral"
-                  fullWidth
-                  label="E-mail ou numero de telefone"
-                  required
-                  sx={{
-                    background: "#DED5D5",
-                    border: "none",
-                    outline: "none",
-                    borderRadius: "inherit",
-                    height: "inherit",
-                    color: "black",
-                    "& *": {
-                      color: "black !important",
-                      borderRadius: "inherit !important",
-                    },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                      borderRadius: "inherit",
-                      height: "110%",
-
-                      border: 0,
-                      outline: 0,
-                    },
-                    "& .MuiInputBase-input": {
-                      // padding: "10px 3px",
-                    },
-                    "& .MuiInputBase-root": {
-                      height: "inherit",
-                      // padding: "10px 3px",
-                    },
-                  }}
-                  className="shadow-lg"
-                />
-              </Box>
-              <Box className="w-full rounded-xl lg:h-16">
-                <TextField
-                  color="neutral"
-                  fullWidth
-                  required
+              <input
+                placeholder="E-mail ou numero de telefone"
+                type="text"
+                className="h-12 rounded-xl border-black/30 bg-[#DED5D5] px-4 text-[13px] text-black shadow-md shadow-black/20 outline-0 placeholder:text-black focus-within:placeholder:text-opacity-80 focus:border md:text-[15px] lg:h-16 "
+              />
+              <div className="flex w-full  rounded-xl border-black/30 bg-[#DED5D5] shadow-md shadow-black/20  focus-within:border">
+                <input
+                  placeholder="Senha"
                   type="password"
-                  label="Senha"
-                  sx={{
-                    background: "#DED5D5",
-                    border: "none",
-                    outline: "none",
-                    borderRadius: "inherit",
-                    height: "inherit",
-                    color: "black",
-                    "& *": {
-                      color: "black !important",
-                      borderRadius: "inherit !important",
-                    },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                      borderRadius: "inherit",
-                      height: "110%",
-
-                      border: 0,
-                      outline: 0,
-                    },
-                    "& .MuiInputBase-input": {
-                      // height: "inherit",
-                      // padding: "10px 3px",
-                    },
-                    "& .MuiInputBase-root": {
-                      height: "inherit",
-                      // padding: "10px 3px",
-                    },
-                  }}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <Button>Exibir</Button>
-                      </InputAdornment>
-                    ),
-                  }}
-                  className="shadow-lg"
+                  className="h-12 flex-1 rounded-xl border-none !bg-transparent px-4 text-[13px] text-black outline-0 placeholder:text-black focus-within:placeholder:text-opacity-80 md:text-[15px] lg:h-16 "
                 />
-              </Box>
-              {/* <Input
-              size="lg"
-              type="text"
-              // placeholder="+123 4567 890"
-              // color="blue"
-              variant="standard"
-              name="email"
-              required
-              className="h-14 rounded-xl border-none bg-[#DED5D5] px-3 text-black outline-none placeholder:text-black focus-within:placeholder:text-black/70"
-              // label="E-mail ou numero de telefone"
-              placeholder="E-mail ou numero de telefone"
-            /> */}
-              <Box className="w-full pl-5">
-                <Link
-                  href="/reset_password"
-                  className="border-b-black/50 transition-all hover:border-b"
-                >
-                  Esqueceu a senha?
-                </Link>
-              </Box>
+                <IconButton>
+                  <FontAwesomeIcon title="Exibir" icon={faEye} />
+                </IconButton>
+              </div>
+
+              <Link
+                href="/reset_password"
+                className="-mt-2 border-b-black/50 transition-all hover:border-b"
+              >
+                Esqueceu a senha?
+              </Link>
             </div>
 
             <Button
@@ -158,7 +83,7 @@ const Login = () => {
             </Link>
           </Box>
         </div>
-        <div className="flex items-start gap-2 flex-col lg:flex-row lg:items-center">
+        <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
           <Typography
             variant="body1"
             className="text-lg font-normal leading-none text-[#EEEEEE]"
@@ -167,6 +92,7 @@ const Login = () => {
           </Typography>
           <Button
             disableTouchRipple
+            onClick={() => router.replace("/seller")}
             className="text-lg font-normal leading-none !text-[#EEEEEE]"
           >
             Entre AQUI

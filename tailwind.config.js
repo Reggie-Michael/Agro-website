@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
+module.exports = {
   // important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,9 +20,10 @@ module.exports = withMT({
         "public-sans": ["Public Sans", "sans-serif"],
       },
       animation: {
-        "ping-slow": "ping 2s linear infinite",
-      },
+        'ping-slow': 'ping 2s linear infinite',
+      }
+    
     },
   },
-  plugins: ["prettier-plugin-tailwindcss"],
-});
+  plugins:["prettier-plugin-tailwindcss"]
+};
