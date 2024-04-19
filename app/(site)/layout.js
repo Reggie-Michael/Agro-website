@@ -10,7 +10,7 @@ export default function Layout({ children }) {
     <Suspense fallback={<Loading />}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <section className="flex h-dvh  w-full items-center justify-center bg-[#3D6440] px-[3%] py-[2%] text-black md:px-[7.5%] lg:px-[10%]  ">
+        <section className="flex min-h-dvh  w-full items-center justify-center bg-[#3D6440] px-[3%] py-[2%] text-black md:px-[7.5%] lg:px-[10%]  ">
           {children}
         </section>
       </ThemeProvider>
