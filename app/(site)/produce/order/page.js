@@ -71,7 +71,7 @@ const OrderMonitor = () => {
               <div className="relative col-start-1 flex h-full w-3 items-center justify-center">
                 <div className="absolute col-start-1 flex h-full w-1 overflow-clip rounded-lg bg-[#39414D]">
                   <hr
-                    className={`${orderStatus === 6 ? "h-full" : calculateHeight(orderStatus)} w-full rounded-xl border-0 bg-[#FF5714]`}
+                    className={`${orderStatus === 6 ? "h-full" : calculateHeight(orderStatus)} w-full rounded-xl border-0 bg-[#FF5714] h-[20%]`}
                   />
                 </div>
                 <div className=" z-10 flex h-full flex-col justify-between">
